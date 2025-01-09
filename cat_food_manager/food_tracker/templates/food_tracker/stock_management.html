@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cat Food Manager</title>
+</head>
+<body>
+    <h1>Cat Food Stock Management</h1>
+    <h2>Current Stock: {{ current_stock }} kg</h2>
+    <h3>Modify Stock</h3>
+    <form action="{% url 'add_food' 1.0 %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Add on 1kg</button>
+    </form>
+    <form action="{% url 'feed_cat' 0.5 %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Feed Cat 0.5kg</button>
+    </form>
+</body>
+</html>
