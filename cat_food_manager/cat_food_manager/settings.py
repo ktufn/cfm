@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['cfm-production.up.railway.app']
 
+CSRF_TRUSTED_ORIGINS = ['https://cfm-production.up.railway.app']
 
 # Application definition
 
