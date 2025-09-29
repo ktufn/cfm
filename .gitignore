@@ -1,24 +1,50 @@
+# --------------------
 # Python
+# --------------------
 __pycache__/
-*.pyc
+*.py[cod]
 *.pyo
 *.pyd
+*.so
 
-# Virtual env
+# Virtual environments
 .venv/
 env/
 venv/
 
-# IDE
-.idea/
-.vscode/
+# Byte-compiled / cache
+*.egg
+*.egg-info/
+.eggs/
 
-# OS files
-.DS_Store
-Thumbs.db
+# Distribution / packaging
+build/
+dist/
+*.wheel
 
 # Logs
 *.log
 
-# Alembic cache
+# SQLite (если случайно создашь локально)
+*.sqlite3
+*.db
+
+# --------------------
+# Alembic
+# --------------------
 alembic/versions/__pycache__/
+
+# --------------------
+# IDE / Editor
+# --------------------
+.idea/
+.vscode/
+*.swp
+*~
+
+# --------------------
+# OS-specific
+# --------------------
+.DS_Store
+Thumbs.db
+
