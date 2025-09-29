@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Добавить покупку{% endblock %}
+
+{% block content %}
+<h2>Добавить покупку</h2>
+<form method="post" action="/web/purchases/add">
+    <label>Количество корма (г):</label>
+    <input type="number" name="amount" min="1" required>
+    <button type="submit">Сохранить</button>
+</form>
+{% endblock %}

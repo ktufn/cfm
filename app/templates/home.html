@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+<h2>Добро пожаловать в Cat Food Manager</h2>
+
+<hr>
+<h3>Остаток корма: {{ total_food }} г</h3>
+
+<h3>Последние кормления</h3>
+<ul>
+    {% for f in last_feedings %}
+        <li>{{ f.timestamp }} — {{ f.amount }} г (User {{ f.user_id }})</li>
+    {% else %}
+        <li>Пока нет кормлений</li>
+    {% endfor %}
+</ul>
+{% endblock %}

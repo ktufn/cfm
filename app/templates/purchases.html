@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Покупки{% endblock %}
+
+{% block content %}
+<h2>Список покупок</h2>
+<a href="/web/purchases/add">Добавить покупку</a>
+<ul>
+    {% for p in purchases %}
+        <li>ID {{ p.id }} — {{ p.amount }} грамм</li>
+    {% endfor %}
+</ul>
+{% endblock %}

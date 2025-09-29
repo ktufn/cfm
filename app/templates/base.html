@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Cat Food Manager{% endblock %}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>Cat Food Manager</h1>
+        <nav>
+            <a href="/web/">Главная</a> |
+            <a href="/web/purchases/add">Добавить покупку</a> |
+            <a href="/web/feedings/add">Добавить кормление</a> |
+            {% if user_email %}
+                <a href="/web/logout">Выйти</a>
+            {% else %}
+                <a href="/web/login">Вход</a> /
+                <a href="/web/register">Регистрация</a>
+            {% endif %}
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Кормления{% endblock %}
+
+{% block content %}
+<h2>Список кормлений</h2>
+<a href="/web/feedings/add">Добавить кормление</a>
+<ul>
+    {% for f in feedings %}
+        <li>ID {{ f.id }} — {{ f.amount }} г — User {{ f.user_id }} — {{ f.timestamp }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
